@@ -140,33 +140,41 @@ MITRE ATT&CK (conceptual mapping)
 
 🧠 Skills Demonstrated
 
-SIEM deployment and configuration
+SIEM deployment and configuration (Microsoft Sentinel)
 
-Log ingestion and analysis
+Log ingestion, correlation, and enrichment
 
-KQL query development
+KQL query development (including ipv4_lookup and watchlists)
 
 Threat detection (brute-force attacks)
 
-Security dashboards and visualizations
+Security dashboards and geographic visualizations
 
 SOC workflows (monitoring, investigation, documentation)
 
-📷 Screenshots
-
-(Insert screenshots here)
-<img width="661" height="1141" alt="Diagrama sin título drawio" src="https://github.com/user-attachments/assets/f2957c11-d278-439f-9bb7-44856207b1a2" />
-
 
 Architecture diagram
+
+<img width="661" height="1141" alt="Diagrama sin título drawio" src="https://github.com/user-attachments/assets/f2957c11-d278-439f-9bb7-44856207b1a2" />
+
 
 Sentinel dashboard
 
 KQL queries
 
 Failed login events
+<img width="958" height="376" alt="image" src="https://github.com/user-attachments/assets/cceb7bc3-16eb-49f0-8d76-e662321ef7f3" />
+
+<img width="409" height="347" alt="image" src="https://github.com/user-attachments/assets/fdae169b-52c9-4ade-bf4d-63feb95f492d" />
+
+Failed login events are enriched using a custom GeoIP watchlist and the ipv4_lookup function to correlate attacker IPs with geographical data (country and coordinates), enabling map-based visualization and attack source analysis.
+
+<img width="899" height="386" alt="image" src="https://github.com/user-attachments/assets/97f2f0a5-6450-4afd-8bbe-ad6a68a33601" />
+
 
 Map visualization
+
+<img width="554" height="384" alt="image" src="https://github.com/user-attachments/assets/3487268a-a2de-4180-9ef2-35f8d2372872" />
 
 📈 Learning Outcomes
 
