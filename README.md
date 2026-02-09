@@ -165,7 +165,8 @@ KQL queries
 Failed login events
 <img width="958" height="376" alt="image" src="https://github.com/user-attachments/assets/cceb7bc3-16eb-49f0-8d76-e662321ef7f3" />
 
-<img width="409" height="347" alt="image" src="https://github.com/user-attachments/assets/fdae169b-52c9-4ade-bf4d-63feb95f492d" />
+<img width="416" height="348" alt="image" src="https://github.com/user-attachments/assets/0bdd6e3f-5c21-4b96-bd7c-15b6c2d3e69f" />
+
 
 Failed login events are enriched using a custom GeoIP watchlist and the ipv4_lookup function to correlate attacker IPs with geographical data (country and coordinates), enabling map-based visualization and attack source analysis.
 
