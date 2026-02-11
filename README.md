@@ -1,5 +1,6 @@
-🛡️ SOC Project – Microsoft Sentinel (SIEM)
-📌 Overview
+# 🛡️ SOC Project – Microsoft Sentinel (SIEM)
+
+## 📌 Overview
 
 This project simulates a Security Operations Center (SOC) environment using Microsoft Sentinel in Azure.
 It focuses on collecting, enriching, detecting, and visualizing malicious authentication activity from Windows Security logs.
@@ -17,7 +18,7 @@ KQL development
 SOC investigation workflows
 
 
-🏗️ Architecture
+## 🏗️ Architecture
 Internet (Attackers)
         ↓
 Azure Windows VM
@@ -29,7 +30,11 @@ Microsoft Sentinel (SIEM)
 Workbooks & Incidents
 
 
-Components:
+# Architecture Diagram
+
+<img width="661" height="1141" alt="Diagrama sin título drawio" src="https://github.com/user-attachments/assets/f2957c11-d278-439f-9bb7-44856207b1a2" />
+
+## Components:
 
 Azure Virtual Machine (Windows)
 
@@ -43,7 +48,7 @@ Watchlists (GeoIP)
 
 Sentinel Workbooks
 
-🎯 Objectives
+## 🎯 Objectives
 
 Simulate brute-force login attempts
 
@@ -57,7 +62,7 @@ Visualize attacker activity using dashboards
 
 Practice SOC monitoring and investigation
 
-🔍 Data Sources
+## 🔍 Data Sources
 
 Windows Security Event Logs:
 
@@ -69,7 +74,7 @@ Windows Security Event Logs:
 
 Logs are ingested using Azure Monitor Agent (AMA) into Log Analytics.
 
-🧪 Attack Simulation
+## 🧪 Attack Simulation
 
 A Windows virtual machine is intentionally exposed to the Internet in a controlled lab environment
 
@@ -77,7 +82,7 @@ External login attempts generate Event ID 4625
 
 These events are used as detection data
 
-📊 Detection & Analysis
+## 📊 Detection & Analysis
 Example Detection Query (Failed Logons)
 SecurityEvent
 | where EventID == 4625
@@ -93,7 +98,8 @@ Repeated authentication failures
 
 High-risk source IPs
 
-🌍 Log Enrichment (GeoIP)
+
+## 🌍 Log Enrichment (GeoIP)
 
 A custom GeoIP watchlist is used to enrich events with country and coordinates.
 
@@ -112,7 +118,7 @@ Contextual threat analysis
 
 Map-based visualization
 
-📈 Visualization
+## 📈 Visualization
 
 Sentinel Workbooks are used to create:
 
@@ -124,7 +130,8 @@ Geographic maps of attacker IPs
 
 Visualizations support SOC monitoring and threat hunting
 
-🚨 Incident Handling
+
+## 🚨 Incident Handling
 
 Alerts and incidents are generated based on detection logic.
 SOC activities performed:
@@ -137,7 +144,7 @@ Basic investigation
 
 Documentation of findings
 
-🛠️ Tools & Technologies
+## 🛠️ Tools & Technologies
 
 Microsoft Sentinel (SIEM)
 
@@ -155,7 +162,7 @@ Network Security Groups
 
 MITRE ATT&CK (conceptual mapping)
 
-🧠 Skills Demonstrated
+## 🧠 Skills Demonstrated
 
 SIEM deployment and configuration
 
@@ -170,11 +177,9 @@ Security dashboards and geographic visualizations
 SOC workflows (monitoring, investigation, documentation)
 
 
-Architecture Diagram
 
-<img width="661" height="1141" alt="Diagrama sin título drawio" src="https://github.com/user-attachments/assets/f2957c11-d278-439f-9bb7-44856207b1a2" />
 
-Microsoft Sentinel Dashboard
+## Microsoft Sentinel Dashboard
 
 Failed Login Events(KQL)
 <img width="958" height="376" alt="image" src="https://github.com/user-attachments/assets/cceb7bc3-16eb-49f0-8d76-e662321ef7f3" />
@@ -189,12 +194,12 @@ Failed login events are enriched using a custom GeoIP watchlist and the ipv4_loo
 
 
 
-Attacker Map Visualization
+## Attacker Map Visualization
 
 <img width="554" height="384" alt="image" src="https://github.com/user-attachments/assets/3487268a-a2de-4180-9ef2-35f8d2372872" />
 
 
-▶️ How to Reproduce
+# ▶️ How to Reproduce
 
 Deploy a Windows VM in Azure
 
