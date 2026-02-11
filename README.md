@@ -20,17 +20,14 @@ SOC investigation workflows
 
 
 ## 🏗️ Architecture
-Internet (Attackers)
 
+Internet (Attackers)
         ↓
 Azure Windows VM
-
         ↓
 Log Analytics Workspace
-
         ↓
 Microsoft Sentinel (SIEM)
-
         ↓
 Workbooks & Incidents
 
