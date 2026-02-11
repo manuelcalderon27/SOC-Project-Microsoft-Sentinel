@@ -1,5 +1,6 @@
 # 🛡️ SOC Project – Microsoft Sentinel (SIEM)
 
+
 ## 📌 Overview
 
 This project simulates a Security Operations Center (SOC) environment using Microsoft Sentinel in Azure.
@@ -20,12 +21,16 @@ SOC investigation workflows
 
 ## 🏗️ Architecture
 Internet (Attackers)
+
         ↓
 Azure Windows VM
+
         ↓
 Log Analytics Workspace
+
         ↓
 Microsoft Sentinel (SIEM)
+
         ↓
 Workbooks & Incidents
 
@@ -48,6 +53,7 @@ Watchlists (GeoIP)
 
 Sentinel Workbooks
 
+
 ## 🎯 Objectives
 
 Simulate brute-force login attempts
@@ -62,6 +68,7 @@ Visualize attacker activity using dashboards
 
 Practice SOC monitoring and investigation
 
+
 ## 🔍 Data Sources
 
 Windows Security Event Logs:
@@ -74,6 +81,7 @@ Windows Security Event Logs:
 
 Logs are ingested using Azure Monitor Agent (AMA) into Log Analytics.
 
+
 ## 🧪 Attack Simulation
 
 A Windows virtual machine is intentionally exposed to the Internet in a controlled lab environment
@@ -81,6 +89,7 @@ A Windows virtual machine is intentionally exposed to the Internet in a controll
 External login attempts generate Event ID 4625
 
 These events are used as detection data
+
 
 ## 📊 Detection & Analysis
 Example Detection Query (Failed Logons)
@@ -118,6 +127,7 @@ Contextual threat analysis
 
 Map-based visualization
 
+
 ## 📈 Visualization
 
 Sentinel Workbooks are used to create:
@@ -144,6 +154,7 @@ Basic investigation
 
 Documentation of findings
 
+
 ## 🛠️ Tools & Technologies
 
 Microsoft Sentinel (SIEM)
@@ -162,6 +173,7 @@ Network Security Groups
 
 MITRE ATT&CK (conceptual mapping)
 
+
 ## 🧠 Skills Demonstrated
 
 SIEM deployment and configuration
@@ -175,8 +187,6 @@ Threat detection (brute-force attacks)
 Security dashboards and geographic visualizations
 
 SOC workflows (monitoring, investigation, documentation)
-
-
 
 
 ## Microsoft Sentinel Dashboard
@@ -193,13 +203,12 @@ Failed login events are enriched using a custom GeoIP watchlist and the ipv4_loo
 
 
 
-
 ## Attacker Map Visualization
 
 <img width="554" height="384" alt="image" src="https://github.com/user-attachments/assets/3487268a-a2de-4180-9ef2-35f8d2372872" />
 
 
-# ▶️ How to Reproduce
+## ▶️ How to Reproduce
 
 Deploy a Windows VM in Azure
 
@@ -224,9 +233,10 @@ This project was developed for educational and learning purposes in a controlled
 Any real user accounts, IP addresses, hostnames, or other identifiers originally present in the logs and screenshots have been anonymized before publication.
 No sensitive personal data or production system information is intentionally disclosed.
 
+
 👤 Author
 
-Manuel Calderón
+Manuel Calderon
 Entry-Level SOC Analyst
 https://www.linkedin.com/in/manuel-calderon-restrepo-abb201231/
 https://github.com/manuelcalderon27
