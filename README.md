@@ -1,5 +1,6 @@
 # 🛡️ SOC Project – Microsoft Sentinel (SIEM) Overview
 
+
 This project simulates a Security Operations Center (SOC) environment using Microsoft Sentinel in Azure. It focuses on collecting, enriching, detecting, and visualizing malicious authentication activity from Windows Security logs. The project now includes the creation and implementation of a custom analytic rule to detect brute-force login attempts, which generates alerts and incidents for SOC investigation.
 
 ## 🎯 The project demonstrates hands-on experience with:
@@ -95,7 +96,6 @@ SecurityEvent
 | where EventID == 4625 
 | summarize FailedLogons = count() by IpAddress 
 | order by FailedLogons desc
-<img width="900" height="395" alt="Failed Attempts Table" src="https://github.com/user-attachments/assets/9a601043-e1d1-4e6e-9ace-abcb412370c1" />
 
 Example of generated incidents:
 "Brute Force Login Attempts involving multiple users" with details on affected users, IP addresses, and failed attempt counts.
@@ -152,9 +152,6 @@ Graph: Shows user and IP correlations
 
 <img width="1823" height="852" alt="Captura de pantalla 2026-02-25 001356" src="https://github.com/user-attachments/assets/05e14787-a9d1-4ca1-9882-291eec8aaa8c" />
 
-
-<img width="958" height="376" alt="Incidents List" src="https://github.com/user-attachments/assets/cceb7bc3-16eb-49f0-8d76-e662321ef7f3" /> <img width="616" height="648" alt="Incident Details" src="https://github.com/user-attachments/assets/0bdd6e3f-5c21-4b96-bd7c-15b6c2d3e69f" />
-
 ## 🧠 SOC activities performed:
 
 Alert triage
@@ -204,7 +201,6 @@ This project was developed for educational and learning purposes in a controlled
 
 **Manuel Calderon**
 Entry-Level SOC Analyst
-
 https://www.linkedin.com/in/manuel-calderon-restrepo-abb201231/
 
 https://github.com/manuelcalderon27
