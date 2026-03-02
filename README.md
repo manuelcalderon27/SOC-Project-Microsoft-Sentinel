@@ -54,16 +54,20 @@ Logs are ingested using Azure Monitor Agent (AMA) into Log Analytics.
 
 A Windows virtual machine is intentionally exposed to the Internet in a controlled lab environment. External login attempts generate Event ID 4625. These events are used as detection data to trigger analytic rules.
 
+## Microsoft Sentinel Dashboard
+**Failed Login Events(KQL)**
+
+<img width="1915" height="751" alt="image" src="https://github.com/user-attachments/assets/6f43b193-9cb0-4a81-b824-d65c0828c21a" />
+<img width="831" height="696" alt="image" src="https://github.com/user-attachments/assets/9dfaea24-1583-494a-8b51-8929b3f5f843" />
+
+
+
 ## 🔍 Detection & Analysis
 ### 📌 Analytic Rule Creation
 
 A custom analytic rule named "Brute Force Login Attempts" was created in Microsoft Sentinel to detect multiple failed login attempts from the same IP address within a short time window.
 
-<img width="958" height="376" alt="Analytic Rule General" src="https://github.com/user-attachments/assets/cceb7bc3-16eb-49f0-8d76-e662321ef7f3" />
-
-MITRE ATT&CK Mapping: Credential Access
-Severity: Medium
-Status: Enabled
+<img width="700" height="700" alt="Captura de pantalla 2026-02-14 161516" src="https://github.com/user-attachments/assets/7b48d0bd-9071-4432-9f99-b875547c044e" />
 
 ## 🧠 Rule Query (KQL):
 SecurityEvent
@@ -79,20 +83,6 @@ Suppression: Not configured
 
 <img width="616" height="648" alt="Analytic Rule Entity Mapping" src="https://github.com/user-attachments/assets/0bdd6e3f-5c21-4b96-bd7c-15b6c2d3e69f" />
 
-## 🧩 Entity Mapping:
-
-Entity 1: IP (Identifier: Address, Value: IpAddress)
-Entity 2: Account (Identifier: Name, Value: Account)
-
-## 🚨 Incident Settings:
-
-Create incidents: Enabled
-Alert Grouping: Enabled (Match all entities)
-Re-open closed incidents: Disabled
-Grouping Period: Match from the last 5 hours
-Incident Correlation: Tenant default
-Automated Response: Not configured
-
 This rule uses KQL to identify:
 Brute-force attempts
 Repeated authentication failures
@@ -105,8 +95,11 @@ SecurityEvent
 | order by FailedLogons desc
 <img width="900" height="395" alt="Failed Attempts Table" src="https://github.com/user-attachments/assets/9a601043-e1d1-4e6e-9ace-abcb412370c1" />
 
-Example of generated incident:
+Example of generated incidents:
 "Brute Force Login Attempts involving multiple users" with details on affected users, IP addresses, and failed attempt counts.
+
+<img width="470" height="405" alt="image" src="https://github.com/user-attachments/assets/714f08d5-d1f5-47d7-b265-fad05aa314bb" />
+
 
 ## 🌍 Log Enrichment (GeoIP)
 
@@ -123,8 +116,6 @@ Geographic attribution of attacker IPs
 Contextual threat analysis
 Map-based visualization
 
-<img width="554" height="384" alt="Enriched GeoIP Query Results" src="https://github.com/user-attachments/assets/3487268a-a2de-4180-9ef2-35f8d2372872" />
-
 ## 📈 Visualization
 
 Sentinel Workbooks are used to create:
@@ -134,12 +125,14 @@ Geographic maps of attacker IPs
 
 Visualizations support SOC monitoring and threat hunting. Additional dashboards show incident status, alert severity, and data ingestion metrics.
 
-<img width="958" height="376" alt="image" src="https://github.com/user-attachments/assets/cceb7bc3-16eb-49f0-8d76-e662321ef7f3" /> <img width="616" height="648" alt="image" src="https://github.com/user-attachments/assets/0bdd6e3f-5c21-4b96-bd7c-15b6c2d3e69f" />
+
 
 Failed login events are enriched using a custom GeoIP watchlist and the ipv4_lookup function to correlate attacker IPs with geographical data (country and coordinates), enabling map-based visualization and attack source analysis.
 
 <img width="900" height="395" alt="image" src="https://github.com/user-attachments/assets/9a601043-e1d1-4e6e-9ace-abcb412370c1" />
-🗺️ Attacker Map Visualization
+
+## 🗺️ Attacker Map Visualization
+
 <img width="554" height="384" alt="image" src="https://github.com/user-attachments/assets/3487268a-a2de-4180-9ef2-35f8d2372872" />
 
 ## 🚑 Incident Handling
@@ -155,6 +148,9 @@ Alerts: 116 (Brute Force Login Attempts)
 Activities: 234
 Graph: Shows user and IP correlations
 
+<img width="1823" height="852" alt="Captura de pantalla 2026-02-25 001356" src="https://github.com/user-attachments/assets/05e14787-a9d1-4ca1-9882-291eec8aaa8c" />
+
+
 <img width="958" height="376" alt="Incidents List" src="https://github.com/user-attachments/assets/cceb7bc3-16eb-49f0-8d76-e662321ef7f3" /> <img width="616" height="648" alt="Incident Details" src="https://github.com/user-attachments/assets/0bdd6e3f-5c21-4b96-bd7c-15b6c2d3e69f" />
 
 ## 🧠 SOC activities performed:
@@ -163,8 +159,6 @@ Alert triage
 Event correlation (e.g., querying related events by IP and time)
 Basic investigation using incident graph and query results
 Documentation of findings
-
-<img width="900" height="395" alt="Related Events" src="https://github.com/user-attachments/assets/9a601043-e1d1-4e6e-9ace-abcb412370c1" /> <img width="554" height="384" alt="Dashboards" src="https://github.com/user-attachments/assets/3487268a-a2de-4180-9ef2-35f8d2372872" />
 
 ## 🧰 Tools & Technologies
 
