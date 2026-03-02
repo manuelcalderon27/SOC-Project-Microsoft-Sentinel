@@ -81,8 +81,6 @@ Alert Threshold: Trigger if query returns more than 0 results
 Event Grouping: Group all events into a single alert
 Suppression: Not configured
 
-<img width="616" height="648" alt="Analytic Rule Entity Mapping" src="https://github.com/user-attachments/assets/0bdd6e3f-5c21-4b96-bd7c-15b6c2d3e69f" />
-
 This rule uses KQL to identify:
 Brute-force attempts
 Repeated authentication failures
