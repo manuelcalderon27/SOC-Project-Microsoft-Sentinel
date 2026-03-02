@@ -200,6 +200,7 @@ This project was developed for educational and learning purposes in a controlled
 ### 👤 Author
 
 **Manuel Calderon**
+
 Entry-Level SOC Analyst
 https://www.linkedin.com/in/manuel-calderon-restrepo-abb201231/
 
