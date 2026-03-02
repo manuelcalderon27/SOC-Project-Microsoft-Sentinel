@@ -202,6 +202,7 @@ This project was developed for educational and learning purposes in a controlled
 **Manuel Calderon**
 
 Entry-Level SOC Analyst
+
 https://www.linkedin.com/in/manuel-calderon-restrepo-abb201231/
 
 https://github.com/manuelcalderon27
