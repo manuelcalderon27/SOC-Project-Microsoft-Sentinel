@@ -67,7 +67,11 @@ A Windows virtual machine is intentionally exposed to the Internet in a controll
 
 A custom analytic rule named "Brute Force Login Attempts" was created in Microsoft Sentinel to detect multiple failed login attempts from the same IP address within a short time window.
 
-<img width="700" height="700" alt="Captura de pantalla 2026-02-14 161516" src="https://github.com/user-attachments/assets/7b48d0bd-9071-4432-9f99-b875547c044e" />
+<img width="1579" height="579" alt="Captura de pantalla 2026-02-14 163147" src="https://github.com/user-attachments/assets/9e399eb3-f52b-4060-8f1f-e2ddcfb58ca3" />
+
+<img width="996" height="567" alt="Captura de pantalla 2026-02-14 163234" src="https://github.com/user-attachments/assets/e2eba5dd-2f1b-4388-8f47-1835944410a3" />
+
+
 
 ## 🧠 Rule Query (KQL):
 SecurityEvent
